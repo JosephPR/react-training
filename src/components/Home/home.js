@@ -14,7 +14,7 @@ export default class Home extends Component {
     this.fetchTodos()
   }
 
-  componentWillMount(){
+  componentDidUpdate(){
     this.updateTodo()
   }
 
