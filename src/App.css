@@ -6,7 +6,6 @@ font-family: 'Cinzel', serif;
 font-family: 'Satisfy', cursive;
 font-family: 'Gloria Hallelujah', cursive; */
 
-
 .App {
   text-align: center;
 font-family: 'Source Sans Pro', sans-serif;
@@ -25,6 +24,16 @@ label {
 }
 
 button {
+  /* font-family: 'Montserrat', sans-serif; */
+  font-size: 1.5rem;
+  color: peru;
+  height: 35px;
+  width: 130px;
+  background-color: rgba(6, 24, 12, 0.7);
+  border-radius: 20px;
+  box-shadow: 1px 1px 1px 1px grey;
+}
+button:hover {
   /* font-family: 'Montserrat', sans-serif; */
   font-size: 1.5rem;
   color: peru;

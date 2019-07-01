@@ -5,6 +5,7 @@ import About from './components/About/about'
 import Custom from './components/Custom/custom'
 import Clock from './components/Clock/Clock'
 import Pokemon from './components/Pokemon/pokemon'
+import Roster from './components/Roster/roster'
 
 export default class App extends Component {
 
@@ -14,17 +15,17 @@ export default class App extends Component {
   return (
     <Router>
       <div className="App">
-        <header>
+        <header className="header">
           <Clock />
           <Link className="link" to="/">Home</Link>
 
           <Link className="link" to="/about">About</Link>
 
-          <Link className="link" to="/topics">Topics</Link>
-
           <Link className="link" to="/custom">Custom</Link>
 
           <Link className="link" to="/pokemon">Pokemon</Link>
+
+          <Link className="link" to="/roster">Training</Link>
 
         </header>
 
@@ -32,46 +33,11 @@ export default class App extends Component {
 
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
-        <Route path="/topics" component={Topics} />
         <Route path="/custom" component={Custom} />
         <Route path="/pokemon" component={Pokemon} />
+        <Route path="/roster" component={Roster} />
       </div>
     </Router>
   );
   }
-}
-
-
-const Topics = ({ match }) => {
-  return (
-    <div>
-      <h2>Topics</h2>
-      <ul>
-        <li>
-          <Link to={`${match.url}/rendering`}>Rendering with React</Link>
-        </li>
-        <li>
-          <Link to={`${match.url}/components`}>Components</Link>
-        </li>
-        <li>
-          <Link to={`${match.url}/props-v-state`}>Props v. State</Link>
-        </li>
-      </ul>
-
-      <Route path={`${match.path}/:topicId`} component={Topic} />
-      <Route
-        exact
-        path={match.path}
-        render={() => <h3>Please select a topic.</h3>}
-      />
-    </div>
-  );
-}
-
-function Topic({ match }) {
-  return (
-    <div>
-      <h3>{match.params.topicId}</h3>
-    </div>
-  );
 }

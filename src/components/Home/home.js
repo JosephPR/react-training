@@ -20,14 +20,14 @@ export default class Home extends Component {
 
 
   fetchTodos = () => {
-    let url = "http://localhost:3000/buddyapis"
+    let url = "http://localhost:3000/todos"
     fetch(url)
       .then(response => response.json())
       .then(result => this.setState({todos: result}))
   }
 
   deleteTodo = (id) => {
-    let url = `http://localhost:3000/buddyapis/${id}`
+    let url = `http://localhost:3000/todos/${id}`
     fetch(url, {
       method: "DELETE",
       headers: {
@@ -39,7 +39,7 @@ export default class Home extends Component {
 }
 
 updateTodo = (id) => {
-    let url = `http://localhost:3000/buddyapis/${id}`
+    let url = `http://localhost:3000/todos/${id}`
     fetch(url, {
       method: "PATCH",
       headers: {
@@ -51,7 +51,7 @@ updateTodo = (id) => {
 }
 
   postTodos = (newTodo) => {
-    let url = "http://localhost:3000/buddyapis"
+    let url = "http://localhost:3000/todos"
     // let newTodos =  [...this.state.todos, newTodo]
     fetch(url, {
       method: "POST",
@@ -72,7 +72,7 @@ updateTodo = (id) => {
     render() {
       return (
     <div className='App'>
-      <h2>Home</h2>
+      <h2>Hello</h2>
       <h3>Welcome to the show</h3>
         <React.Fragment>
           <TodoForm postTodos={this.postTodos}/>

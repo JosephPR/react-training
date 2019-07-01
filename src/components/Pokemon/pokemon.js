@@ -44,7 +44,7 @@ incrementCount = () => {
               </div>
               <p> The button was clicked {this.state.clickCount} times.</p>
               <button onClick={this.incrementCount}>CLICK ME</button>
-
+                <footer>@Gotta Catchem all!&hearts;</footer>
             </div>
       }
 }

@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Barriecito|Cinzel|Gloria+Hallelujah|Montserrat|Satisfy|Russo+One|Source+Sans+Pro&display=swap');
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Barriecito', cursive;
+font-family: 'Cinzel', serif;
+font-family: 'Satisfy', cursive;
+font-family: 'Gloria Hallelujah', cursive; */
+
+
+.clock {
+  font-family: 'Russo One', cursive;
+  color: rgba(86, 117, 9, 0.5);
+
+
+}

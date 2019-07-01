@@ -35,6 +35,7 @@ componentDidMount() {
     return (
     <React.Fragment>
     <h1>Hello</h1>
+    <p>This is dummy data comsumed from a third party api call jsonplaceholder.typicode.com</p>
     <img src="https://media1.giphy.com/media/n6LpfECvXciw8/giphy.gif?cid=790b76115d18da4c4f43476b4d7d34ff&rid=giphy.gif" alt="peewee" />
     <h1>Random User</h1>
    {error ? <p>{error.message}</p> : null}

@@ -8,12 +8,16 @@ export default function TodoContainer(props) {
        deleteTodo={props.deleteTodo}
         updateTodo={props.updateTodo}
          id={item.id} name={item.name}
-          content={item.content} />
+          content={item.content}
+          image={item.image} />
   })
 
   return(
     <React.Fragment>
+
     {listItems}
+
+
     </React.Fragment>
   )
 }
