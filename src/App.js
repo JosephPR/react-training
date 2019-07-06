@@ -6,6 +6,7 @@ import Custom from './components/Custom/custom'
 import Clock from './components/Clock/Clock'
 import Pokemon from './components/Pokemon/pokemon'
 import Roster from './components/Roster/roster'
+import Challenge from './components/Account/AccountContainer'
 
 export default class App extends Component {
 
@@ -27,6 +28,8 @@ export default class App extends Component {
 
           <Link className="link" to="/roster">Training</Link>
 
+          <Link className="link" to="/challenge">Challenge</Link>
+
         </header>
 
         <hr />
@@ -36,6 +39,7 @@ export default class App extends Component {
         <Route path="/custom" component={Custom} />
         <Route path="/pokemon" component={Pokemon} />
         <Route path="/roster" component={Roster} />
+        <Route path="/challenge" component={Challenge} />
       </div>
     </Router>
   );

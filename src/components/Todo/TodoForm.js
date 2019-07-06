@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import '../../App.css'
 import {BrowserRouter as Router} from 'react-router-dom'
 import Input from '@material-ui/core/Input';
+// import Todo from './TodoContainer'
 
 export default class TodoForm extends Component {
 
@@ -47,7 +48,9 @@ export default class TodoForm extends Component {
                 <Input name="content" id="content" onChange={(event) => this.handleChange(event)} value={this.state.content} />
               <button>Submit</button>
             </form>
+
         </React.Fragment>
+
       </Router>
     )
   }

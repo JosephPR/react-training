@@ -14,10 +14,6 @@ export default class Home extends Component {
     this.fetchTodos()
   }
 
-  componentDidUpdate(){
-    this.updateTodo()
-  }
-
 
   fetchTodos = () => {
     let url = "http://localhost:3000/todos"
@@ -39,15 +35,17 @@ export default class Home extends Component {
 }
 
 updateTodo = (id) => {
+    console.log(id)
+    let newObj = { title: "JOEY", content: "newContent" }
     let url = `http://localhost:3000/todos/${id}`
     fetch(url, {
-      method: "PATCH",
+      method: "PUT",
+      body: JSON.stringify(newObj),
       headers: {
         'Content-Type': 'applicatiion/json',
         'Accept': 'application/json'
       }
     })
-    .then(result => this.fetchTodos())
 }
 
   postTodos = (newTodo) => {
@@ -75,9 +73,9 @@ updateTodo = (id) => {
       <h2>Hello</h2>
       <h3>Welcome to the show</h3>
         <React.Fragment>
-          <TodoForm postTodos={this.postTodos}/>
+          <TodoForm postTodos={this.postTodos} updateTodo={this.updateTodo}  />
     {this.state.todos
-      ? <TodoContainer deleteTodo={this.deleteTodo} updateTodo={this.updateTodo}  todos={this.state.todos} />
+      ? <TodoContainer updateTodo={this.updateTodo} deleteTodo={this.deleteTodo} todos={this.state.todos} />
     : <img src="https://media1.giphy.com/media/71CE9qn5HM8Du/giphy.webp?cid=790b76115d13ebb271364841595b1337&rid=giphy.webp" alt="megaman" />
     }
         </React.Fragment>

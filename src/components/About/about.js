@@ -5,7 +5,7 @@ export default class About extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      marketData: [],
+      marketData: '',
     }
   }
 
@@ -26,7 +26,7 @@ componentDidMount(){
       <h2>Stocks</h2>
 
           <p>Rendering Stocks loading......</p>
-          <h1>{console.log(this.state.marketData)}</h1>
+          <h1>{console.log(this.state.marketData.data)}</h1>
           <p>Objects are not valid as a React child (found: object with keys symbols_requested, symbols_returned, data). If you meant to render a collection of children, use an array instead.</p>
           </React.Fragment>
           )}

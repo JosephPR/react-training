@@ -1,28 +1,136 @@
 import React, {Component} from 'react'
-import Bulbasaur from './bulbasaur'
-import Palkia from './palkia'
+
 
 export default class Pokemon extends Component {
   constructor(props) {
     super(props)
       this.state = {
         clickCount: 0,
-        pokemonImage: "",
+        pikachuImage: "",
+        bulbasaurImage: '',
+          plakiaImage: '',
+          charizardImage: '',
 
       }
   }
 
 componentDidMount(){
-  const url ='https://pokeapi.co/api/v2/pokemon/pikachu/'
+  const pikachu ='https://pokeapi.co/api/v2/pokemon/pikachu/'
 
-  fetch (url)
+  fetch (pikachu)
       .then(response => response.json())
       .then(response => {
         const imageUrl = response.sprites.front_default
         this.setState({
-          pokemonImage: imageUrl
+          pikachuImage: imageUrl,
         })
       })
+  const squirtle ='https://pokeapi.co/api/v2/pokemon/squirtle/'
+
+  fetch (squirtle)
+      .then(response => response.json())
+      .then(response => {
+        const imageUrl = response.sprites.front_default
+        this.setState({
+          squirtleImage: imageUrl,
+        })
+      })
+  const lopunny ='https://pokeapi.co/api/v2/pokemon/lopunny/'
+
+  fetch (lopunny)
+      .then(response => response.json())
+      .then(response => {
+        const imageUrl = response.sprites.front_default
+        this.setState({
+          lopunnyImage: imageUrl,
+        })
+      })
+  const gengar ='https://pokeapi.co/api/v2/pokemon/gengar/'
+
+  fetch (gengar)
+      .then(response => response.json())
+      .then(response => {
+        const imageUrl = response.sprites.front_default
+        this.setState({
+          gengarImage: imageUrl,
+        })
+      })
+  const greninja ='https://pokeapi.co/api/v2/pokemon/greninja/'
+
+  fetch (greninja)
+      .then(response => response.json())
+      .then(response => {
+        const imageUrl = response.sprites.front_default
+        this.setState({
+          greninjaImage: imageUrl,
+        })
+      })
+  const vulpix ='https://pokeapi.co/api/v2/pokemon/vulpix/'
+
+  fetch (vulpix)
+      .then(response => response.json())
+      .then(response => {
+        const imageUrl = response.sprites.front_default
+        this.setState({
+          vulpixImage: imageUrl,
+        })
+      })
+  const blaziken ='https://pokeapi.co/api/v2/pokemon/blaziken/'
+
+  fetch (blaziken)
+      .then(response => response.json())
+      .then(response => {
+        const imageUrl = response.sprites.front_default
+        this.setState({
+          blazikenImage: imageUrl,
+        })
+      })
+
+
+  const jigglypuff ='https://pokeapi.co/api/v2/pokemon/jigglypuff/'
+
+  fetch (jigglypuff)
+      .then(response => response.json())
+      .then(response => {
+        const imageUrl = response.sprites.front_default
+        this.setState({
+          jigglypuffImage: imageUrl,
+        })
+      })
+
+  const charizard ='https://pokeapi.co/api/v2/pokemon/charizard/'
+
+  fetch (charizard)
+      .then(response => response.json())
+      .then(response => {
+        const imageUrl = response.sprites.front_default
+        this.setState({
+          charizardImage: imageUrl,
+
+        })
+      })
+
+      const bulbasaur ='https://pokeapi.co/api/v2/pokemon/bulbasaur/'
+
+      fetch (bulbasaur)
+          .then(response => response.json())
+          .then(response => {
+            const bulbasaurUrl = response.sprites.front_default
+            this.setState({
+              bulbasaurImage: bulbasaurUrl
+            })
+          })
+
+          const palkia = 'https://pokeapi.co/api/v2/pokemon/palkia'
+
+          fetch(palkia)
+            .then(response => response.json())
+            .then(response => {
+              const palkiaUrl = response.sprites.front_default
+              this.setState({
+                palkiaImage: palkiaUrl
+              })
+            })
 }
 
 
@@ -38,9 +146,18 @@ incrementCount = () => {
     return <div>
               <h1>HELLO!!</h1>
               <div>
-                <Bulbasaur />
-                <Palkia />
-                <img src={this.state.pokemonImage} alt="Ditto" />
+
+                <img src={this.state.pikachuImage} alt="pikachu" />
+                <img src={this.state.vulpixImage} alt="vulpix" />
+                <img src={this.state.greninjaImage} alt="greninja" />
+                <img src={this.state.lopunnyImage} alt="lopunny" />
+                <img src={this.state.gengarImage} alt="gengar" />
+                <img src={this.state.blazikenImage} alt="blaziken" />
+                <img src={this.state.bulbasaurImage} alt="bulbasaur" />
+                <img src={this.state.charizardImage} alt="charizard" />
+                <img src={this.state.palkiaImage} alt="palkia" />
+                <img src={this.state.jigglypuffImage} alt="jigglypuff" />
+                <img src={this.state.squirtleImage} alt="squirtle" />
               </div>
               <p> The button was clicked {this.state.clickCount} times.</p>
               <button onClick={this.incrementCount}>CLICK ME</button>

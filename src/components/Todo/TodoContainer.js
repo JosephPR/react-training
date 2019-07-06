@@ -3,6 +3,7 @@ import TodoItem from './TodoItem'
 
 export default function TodoContainer(props) {
   const listItems = props.todos.map((item) => {
+    // console.log(item.id)
     return <TodoItem
        key={item.id}
        deleteTodo={props.deleteTodo}
@@ -16,7 +17,7 @@ export default function TodoContainer(props) {
     <React.Fragment>
 
     {listItems}
-
+  
 
     </React.Fragment>
   )
