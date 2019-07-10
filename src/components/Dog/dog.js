@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import '../../App.css'
-import TodoForm from '../Todo/TodoForm'
-import TodoContainer from '../Todo/TodoContainer'
+import DogForm from './dog-form'
+import DogContainer from './dog-container'
 
-export default class Home extends Component {
+export default class Dog extends Component {
   constructor(props){
     super(props)
     this.state = {
@@ -33,6 +33,10 @@ export default class Home extends Component {
     })
     .then(result => this.fetchTodos())
 }
+
+/*setEditedDog = dog => {
+  this.state.updateTodo = dog
+}*/
 
 updateTodo = (id) => {
     console.log(id)
@@ -70,13 +74,12 @@ updateTodo = (id) => {
     render() {
       return (
     <div className='App'>
-      <h2>Hello</h2>
-      <h3>Welcome to the show</h3>
+
         <React.Fragment>
-          <TodoForm postTodos={this.postTodos} updateTodo={this.updateTodo}  />
+          <DogForm postTodos={this.postTodos} updateTodo={this.updateTodo}  />
     {this.state.todos
-      ? <TodoContainer updateTodo={this.updateTodo} deleteTodo={this.deleteTodo} todos={this.state.todos} />
-    : <img src="https://media1.giphy.com/media/71CE9qn5HM8Du/giphy.webp?cid=790b76115d13ebb271364841595b1337&rid=giphy.webp" alt="megaman" />
+      ? <DogContainer updateTodo={this.updateTodo} deleteTodo={this.deleteTodo} todos={this.state.todos} setEditedDog={this.state.setEditedDog} />
+    : <img src="https://media0.giphy.com/media/WLbtNNR5TKJBS/giphy.gif?cid=790b76115d265b8b4539484f591f3537&rid=giphy.gif" alt="megaman" />
     }
         </React.Fragment>
     </div>

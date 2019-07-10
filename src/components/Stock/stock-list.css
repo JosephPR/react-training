@@ -1,0 +1,28 @@
+.stock-card-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(170, 150, 82, 0.4);
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 25px;
+  cursor: pointer;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: transform 0.25s ease-out;
+}
+
+.stock-card-container:hover {
+  transform: scale(1.02);
+}
+
+.stock-card-list {
+  width: 85vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.stocks {
+  color: rgb(133, 74, 25);
+}

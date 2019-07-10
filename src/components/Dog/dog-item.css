@@ -1,0 +1,46 @@
+span {
+  color: #000;
+}
+
+#name{
+  color: rgb(128, 54, 1);
+}
+
+
+#delete {
+
+  background-color: rgba(179, 57, 57, 0.71);
+}
+#delete:hover {
+
+  background-color: rgb(181, 45, 41);
+}
+
+.dog-card-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(223, 167, 0, 0.34);
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 25px;
+  cursor: pointer;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: transform 0.25s ease-out;
+}
+
+.dog-card-container:hover {
+  background-color: rgba(151, 244, 195, 0.45);
+}
+
+.dog-card-list {
+  width: 85vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.dog-pics {
+  width: 90%;
+}

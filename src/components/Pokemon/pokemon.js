@@ -148,6 +148,7 @@ incrementCount = () => {
               <div>
 
                 <img src={this.state.pikachuImage} alt="pikachu" />
+                
                 <img src={this.state.vulpixImage} alt="vulpix" />
                 <img src={this.state.greninjaImage} alt="greninja" />
                 <img src={this.state.lopunnyImage} alt="lopunny" />

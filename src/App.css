@@ -7,6 +7,15 @@ font-family: 'Satisfy', cursive;
 font-family: 'Gloria Hallelujah', cursive; */
 
 
+.list {
+  text-align: center;
+  margin-left: 22%;
+}
+.search input {
+  font-size: 2rem;
+  width: 500px;
+  margin-left: 15%
+}
 
 .card img {
   max-width: 60%;

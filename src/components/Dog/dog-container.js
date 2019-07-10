@@ -1,23 +1,24 @@
 import React from 'react'
-import TodoItem from './TodoItem'
+import DogItem from './dog-item'
+import './dog-item.css'
 
-export default function TodoContainer(props) {
+export default function DogContainer(props) {
   const listItems = props.todos.map((item) => {
     // console.log(item.id)
-    return <TodoItem
+    return <DogItem
        key={item.id}
        deleteTodo={props.deleteTodo}
-        updateTodo={props.updateTodo}
+        setEditedDog = {props.setEditedDog}
          id={item.id} name={item.name}
-          content={item.content}
+          adaptability={item.adaptability}
           image={item.image} />
   })
 
   return(
     <React.Fragment>
+      <div  className="dog-card-list">{listItems}</div>
 
-    {listItems}
-  
+
 
     </React.Fragment>
   )

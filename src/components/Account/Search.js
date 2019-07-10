@@ -1,9 +1,10 @@
 import React from 'react'
+import '../../App.css'
 
 
 const Search = (props) => {
   return (
-    <div className="ui huge fluid icon input">
+    <div className="search">
       <input
         type="text"
         placeholder={"Search your Recent Transactions"}

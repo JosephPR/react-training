@@ -4,14 +4,14 @@ import {BrowserRouter as Router} from 'react-router-dom'
 import Input from '@material-ui/core/Input';
 // import Todo from './TodoContainer'
 
-export default class TodoForm extends Component {
+export default class DogForm extends Component {
 
   constructor(props) {
     super(props)
     this.state = {
       name: '',
       image: '',
-      content: '',
+      adaptability: '',
     }
   }
 
@@ -28,7 +28,7 @@ export default class TodoForm extends Component {
       this.setState({
   name: '',
   image: '',
-  content: '',
+  adaptability: '',
 })
     }
 
@@ -40,12 +40,12 @@ export default class TodoForm extends Component {
         <React.Fragment>
           <h1> Doggie Directory </h1>
             <form onSubmit={(event) => this.handleSubmit(event)}>
-              <label htmlFor='name'>Name: </label>
+              <label htmlFor='name'>Breed: </label>
                 <Input name="name" id="name" onChange={(event) => this.handleChange(event)} value={this.state.name} />
               <label htmlFor='image'>Image: </label>
                 <Input name="image" id="image" onChange={(event) => this.handleChange(event)} value={this.state.image} />
-              <label htmlFor='content'>Content: </label>
-                <Input name="content" id="content" onChange={(event) => this.handleChange(event)} value={this.state.content} />
+              <label htmlFor='adaptability'>Adaptability: </label>
+                <Input name="adaptability" id="adaptability" onChange={(event) => this.handleChange(event)} value={this.state.adaptability} />
               <button>Submit</button>
             </form>
 

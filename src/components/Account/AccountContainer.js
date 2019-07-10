@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import TransactionsList from './TransactionsList'
 import Search from './Search'
+import '../../App.css'
 
 // import {transactions} from '../transactionsData'
 
@@ -50,7 +51,7 @@ class AccountContainer extends Component {
         <Search onChange={this.searchFunction}/>
         {
           this.state.filterTransactions
-          ?   <TransactionsList name="transactions" transactions={this.state.filterTransactions} onChange={(event) => this.handleChange(event)} />
+          ?   <TransactionsList className="list" name="transactions" transactions={this.state.filterTransactions} onChange={(event) => this.handleChange(event)} />
         : ""
         }
 
