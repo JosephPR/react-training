@@ -78,7 +78,6 @@ handleChange = (e) => {
             <React.Fragment>
               <div>
                 <div className="stock-card-container">
-                  <h1 className="stocks">  { stock.name }</h1>
                   <h1 className="stocks">  { stock.symbol }</h1>
                   <h2> Price: { stock.price }</h2>
                   <h2> Daily High: { stock.day_high }</h2>
@@ -100,7 +99,7 @@ handleChange = (e) => {
             <React.Fragment>
               <div>
                 <div className="stock-card-container">
-                  <h1 className="stocks">  { stock.name }</h1>
+
                   <h1 className="stocks">  { stock.symbol }</h1>
                   <h2> Price: { stock.price }</h2>
                   <h2> Daily High: { stock.day_high }</h2>
@@ -122,7 +121,7 @@ handleChange = (e) => {
             <React.Fragment>
               <div>
                 <div className="stock-card-container">
-                  <h1 className="stocks">  { stock.name }</h1>
+
                   <h1 className="stocks">  { stock.symbol }</h1>
                   <h2> Price: { stock.price }</h2>
                   <h2> Daily High: { stock.day_high }</h2>
@@ -144,7 +143,6 @@ handleChange = (e) => {
             <React.Fragment>
               <div>
                 <div className="stock-card-container">
-                  <h1 className="stocks">  { stock.name }</h1>
                   <h1 className="stocks">  { stock.symbol }</h1>
                   <h2> Price: { stock.price }</h2>
                   <h2> Daily High: { stock.day_high }</h2>

@@ -48,7 +48,7 @@ export default class ExoticForm extends Component {
                 <Input name="content" id="content" onChange={(event) => this.handleChange(event)} value={this.state.content} />
               <button>Submit</button>
             </form>
-
+            <br />
         </React.Fragment>
 
       </Router>

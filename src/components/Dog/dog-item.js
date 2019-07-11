@@ -20,7 +20,7 @@ render() {
     <React.Fragment>
 
         <div className="dog-card-container">
-        <h1 id="name"> <span>Breed:</span> {this.props.name}</h1>
+        <h1 id="name"> {this.props.name}</h1>
         <img className="dog-pics" src={this.props.image} alt="pics" /><br />
         <h4>{this.props.content}</h4>
         <button id="delete" onClick= { () => this.props.deleteDog(this.props.id)}>Delete</button>
