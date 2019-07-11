@@ -18,7 +18,7 @@ export default class Stock extends Component {
   }
 
 componentDidMount(){
-  let favUrl = `https://api.worldtradingdata.com/api/v1/stock?symbol=BABA,FB,SPOT,TWLO,AAPL&api_token=acCz10cbIPNeDpHtlNLT5jsG3J0ivtvcBeQmoOp1GoCFCNkkl9GfsXsT0Nds`
+  let favUrl = `https://api.worldtradingdata.com/api/v1/stock?symbol=BABA,FB,WW,TWLO,AAPL&api_token=acCz10cbIPNeDpHtlNLT5jsG3J0ivtvcBeQmoOp1GoCFCNkkl9GfsXsT0Nds`
 
   fetch(favUrl)
     .then(response => response.json())
@@ -45,7 +45,7 @@ componentDidMount(){
 
     })
   )
-  let shortUrl = `https://api.worldtradingdata.com/api/v1/stock?symbol=AAL,EA,PEP,MMM,DVA&api_token=acCz10cbIPNeDpHtlNLT5jsG3J0ivtvcBeQmoOp1GoCFCNkkl9GfsXsT0Nds`
+  let shortUrl = `https://api.worldtradingdata.com/api/v1/stock?symbol=AAL,EA,CI,MMM,DVA&api_token=acCz10cbIPNeDpHtlNLT5jsG3J0ivtvcBeQmoOp1GoCFCNkkl9GfsXsT0Nds`
 
   fetch(shortUrl)
     .then(response => response.json())
