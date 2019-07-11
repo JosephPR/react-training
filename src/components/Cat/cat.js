@@ -1,29 +1,29 @@
 import React, { Component } from 'react'
 import '../../App.css'
-import DogForm from './dog-form'
-import DogContainer from './dog-container'
+import CatForm from './cat-form'
+import CatContainer from './cat-container'
 
-export default class Dog extends Component {
+export default class Cat extends Component {
   constructor(){
     super()
     this.state = {
-      dogs: ''
+      cats: ''
     }
   }
   componentDidMount(){
-    this.fetchDogs()
+    this.fetchCats()
   }
 
 
-  fetchDogs = () => {
-    let url = "http://localhost:3000/api/v1/dogs"
+  fetchCats = () => {
+    let url = "http://localhost:3000/api/v1/cats"
     fetch(url)
       .then(response => response.json())
-      .then(result => this.setState({dogs: result}))
+      .then(result => this.setState({cats: result}))
   }
 
-  deleteDog = (id) => {
-    let url = `http://localhost:3000/api/v1/dogs/${id}`
+  deleteCat = (id) => {
+    let url = `http://localhost:3000/api/v1/cats/${id}`
     fetch(url, {
       method: "DELETE",
       headers: {
@@ -31,17 +31,17 @@ export default class Dog extends Component {
         'Accept': 'application/json'
       }
     })
-    .then(result => this.fetchDogs())
+    .then(result => this.fetchCats())
 }
 
-/*setEditedDog = dog => {
-  this.state.updateTodo = dog
+/*setEditedCat = cat => {
+  this.state.updateTodo = cat
 }*/
 
 updateTodo = (id) => {
     console.log(id)
     let newObj = { title: "JOEY", content: "newContent" }
-    let url = `http://localhost:3000/api/v1${id}`
+    let url = `http://localhost:3000/api/v1/${id}`
     fetch(url, {
       method: "PUT",
       body: JSON.stringify(newObj),
@@ -52,12 +52,12 @@ updateTodo = (id) => {
     })
 }
 
-  postDog = (newDog) => {
-    let url = "http://localhost:3000/api/v1/dogs"
+  postCat = (newCat) => {
+    let url = "http://localhost:3000/api/v1/cats"
     // let newTodos =  [...this.state.todos, newTodo]
     fetch(url, {
       method: "POST",
-      body: JSON.stringify(newDog),
+      body: JSON.stringify(newCat),
       headers: {
         'Content-Type': 'application/json'
       }
@@ -65,7 +65,7 @@ updateTodo = (id) => {
     .then(res => res.json())
     .then(response => console.log('Success:', JSON.stringify(response)))
     .catch(error => console.error('Error:', error))
-    .then(result => this.fetchDogs())
+    .then(result => this.fetchCats())
   }
 
 
@@ -76,9 +76,9 @@ updateTodo = (id) => {
     <div className='App'>
 
         <React.Fragment>
-          <DogForm postDog={this.postDog} updateTodo={this.updateTodo}  />
-    {this.state.dogs
-      ? <DogContainer updateTodo={this.updateTodo} deleteDog={this.deleteDog} dogs={this.state.dogs} />
+          <CatForm postCat={this.postCat} updateTodo={this.updateTodo}  />
+    {this.state.cats
+      ? <CatContainer updateTodo={this.updateTodo} deleteCat={this.deleteCat} cats={this.state.cats} />
     : <img src="https://media0.giphy.com/media/WLbtNNR5TKJBS/giphy.gif?cid=790b76115d265b8b4539484f591f3537&rid=giphy.gif" alt="corgry" />
     }
         </React.Fragment>

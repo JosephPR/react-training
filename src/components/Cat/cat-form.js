@@ -4,7 +4,7 @@ import {BrowserRouter as Router} from 'react-router-dom'
 import Input from '@material-ui/core/Input';
 // import Todo from './TodoContainer'
 
-export default class DogForm extends Component {
+export default class CatForm extends Component {
 
   constructor(props) {
     super(props)
@@ -22,9 +22,9 @@ export default class DogForm extends Component {
     }
 
     handleSubmit = (event) => {
-      const newDog = this.state
+      const newCat = this.state
       event.preventDefault()
-      this.props.postDog(newDog)
+      this.props.postCat(newCat)
       this.setState({
   name: '',
   image_url: '',
@@ -38,7 +38,7 @@ export default class DogForm extends Component {
     return(
       <Router>
         <React.Fragment>
-          <h1> Dog Specs </h1>
+          <h1> Cat Specs </h1>
             <form onSubmit={(event) => this.handleSubmit(event)}>
               <label htmlFor='name'>Breed: </label>
                 <Input name="name" id="name" onChange={(event) => this.handleChange(event)} value={this.state.name} />

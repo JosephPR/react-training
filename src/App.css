@@ -52,7 +52,9 @@ button {
   color: peru;
   height: 35px;
   width: 130px;
-  background-color: rgba(6, 24, 12, 0.7);
+  background-color: rgb(143, 190, 97);
+
+    cursor: pointer;
   border-radius: 20px;
   box-shadow: 1px 1px 1px 1px grey;
 }
@@ -62,7 +64,7 @@ button:hover {
   color: peru;
   height: 35px;
   width: 130px;
-  background-color: rgb(6, 24, 12);
+  background-color: rgb(88, 149, 29);
   border-radius: 20px;
   box-shadow: 1px 1px 1px 1px grey;
 }
@@ -82,5 +84,12 @@ ul {
   padding-left: 100px;
   padding-right: 60px;
   font-size: 1.5rem;
+  color: rgb(140, 15, 41);
+}
+
+.pet-link {
+  padding-left: 100px;
+  padding-right: 60px;
+  font-size: 1.7rem;
   color: rgb(140, 15, 41);
 }

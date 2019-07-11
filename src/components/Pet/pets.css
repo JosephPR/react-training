@@ -1,0 +1,8 @@
+.pet-link {
+  padding-left: 100px;
+  padding-right: 60px;
+  font-size: 3rem;
+  background: -webkit-linear-gradient(180deg,rgb(143, 32, 45), rgb(255, 46, 100));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

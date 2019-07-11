@@ -16,7 +16,7 @@ span {
   background-color: rgb(181, 45, 41);
 }
 
-.dog-card-container {
+.exotic-card-container {
   display: flex;
   flex-direction: column;
   background-color: rgba(223, 167, 0, 0.34);
@@ -29,18 +29,18 @@ span {
   transition: transform 0.25s ease-out;
 }
 
-.dog-card-container:hover {
+.exotic-card-container:hover {
   background-color: rgba(151, 244, 195, 0.45);
 }
 
-.dog-card-list {
+.exotic-card-list {
   width: 85vw;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
 }
 
-.dog-pics {
+.exotic-pics {
   width: 90%;
 }
