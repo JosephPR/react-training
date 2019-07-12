@@ -11,6 +11,8 @@ export default function RamContainer(props) {
          id={character.id} name={character.name}
           image={character.image}
           status={character.status}
+          species={character.species}
+          origin={character.origin.name}
           />
 
   })
