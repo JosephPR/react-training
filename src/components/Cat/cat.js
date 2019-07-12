@@ -35,10 +35,10 @@ export default class Cat extends Component {
 }
 
 /*setEditedCat = cat => {
-  this.state.updateTodo = cat
+  this.state.updateCat = cat
 }*/
 
-updateTodo = (id) => {
+updateCat = (id) => {
     console.log(id)
     let newObj = { title: "JOEY", content: "newContent" }
     let url = `http://localhost:3000/api/v1/${id}`
@@ -54,7 +54,7 @@ updateTodo = (id) => {
 
   postCat = (newCat) => {
     let url = "http://localhost:3000/api/v1/cats"
-    // let newTodos =  [...this.state.todos, newTodo]
+    // let newCats =  [...this.state.todos, newCat]
     fetch(url, {
       method: "POST",
       body: JSON.stringify(newCat),
@@ -76,9 +76,9 @@ updateTodo = (id) => {
     <div className='App'>
 
         <React.Fragment>
-          <CatForm postCat={this.postCat} updateTodo={this.updateTodo}  />
+          <CatForm postCat={this.postCat} updateCat={this.updateCat}  />
     {this.state.cats
-      ? <CatContainer updateTodo={this.updateTodo} deleteCat={this.deleteCat} cats={this.state.cats} />
+      ? <CatContainer updateCat={this.updateCat} deleteCat={this.deleteCat} cats={this.state.cats} />
     : <img src="https://media0.giphy.com/media/WLbtNNR5TKJBS/giphy.gif?cid=790b76115d265b8b4539484f591f3537&rid=giphy.gif" alt="corgry" />
     }
         </React.Fragment>
