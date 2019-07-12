@@ -143,6 +143,23 @@ incrementCount = () => {
   })
 }
 
+postPokemon = (newPokemon) => {
+  let url = "http://localhost:3000/api/v1/pokemon"
+  // let newTodos =  [...this.state.todos, newTodo]
+  fetch(url, {
+    method: "POST",
+    body: JSON.stringify(newPokemon),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  .then(res => res.json())
+  .then(response => console.log('Success:', JSON.stringify(response)))
+  .catch(error => console.error('Error:', error))
+  .then(result => this.fetchPokemons())
+}
+
+
   render(){
     return <div>
               <div>

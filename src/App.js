@@ -12,6 +12,7 @@ import Pokemon from './components/Pokemon/pokemon'
 import Roster from './components/Roster/roster'
 import Challenge from './components/Account/AccountContainer'
 import Jokes from './components/Jokes/jokes'
+import RickAndMorty from './components/RickAndMorty/rick-and-morty'
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 import './sidebar.css'
 
@@ -32,11 +33,14 @@ export default function App () {
 
             <Link className="link" to="/pokemon">Pokemon</Link>
 
+            <Link className="link" to="/jokes">Jokes</Link>
+
+            <Link className="link" to="/rickandmorty">Rick</Link>
+
             <Link className="link" to="/roster">Training</Link>
 
             <Link className="link" to="/challenge">Challenge</Link>
 
-            <Link className="link" to="/jokes">Jokes</Link>
           </Menu>
         </header>
 
@@ -52,6 +56,7 @@ export default function App () {
         <Route path="/roster" component={Roster} />
         <Route path="/challenge" component={Challenge} />
         <Route path="/jokes" component={Jokes} />
+        <Route path='/rickandmorty' component={RickAndMorty} />
       </div>
     </Router>
   );
