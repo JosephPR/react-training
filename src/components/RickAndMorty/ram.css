@@ -1,7 +1,7 @@
 .ram-card-container {
   display: flex;
   flex-direction: column;
-  background-color: #95dada;
+  background-color: rgba(194, 226, 183, 0.5);
   border: 1px solid grey;
   border-radius: 5px;
   padding: 25px;
@@ -13,6 +13,7 @@
 
 .ram-card-container:hover {
   transform: scale(1.05);
+    background-color: rgba(194, 226, 183, 0.2);
 }
 
 .character-card-list {

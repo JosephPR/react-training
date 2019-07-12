@@ -17,6 +17,7 @@ render() {
         <h3><u>Status:</u>  {this.props.status}</h3>
         <h3><u>Species:</u> {this.props.species}</h3>
         <h3><u>Origin:</u> {this.props.origin}</h3>
+        <h3> {this.props.type}</h3>
           </div>
     </React.Fragment>
   )
