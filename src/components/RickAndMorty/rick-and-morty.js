@@ -9,7 +9,7 @@ export default class RickAndMorty extends Component {
   }
 
   componentDidMount () {
-    const characters = "https://rickandmortyapi.com/api/character/27"
+    const characters = "https://rickandmortyapi.com/api/character/134"
 
     fetch (characters)
       .then(response => response.json())

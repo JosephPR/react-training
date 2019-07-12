@@ -1,4 +1,24 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+While on my journey to discover the magic of react I have build an ever growing application that post all data to a rails backend. Mostly css except for a button from material-ui. The app consists of an array of components, there is also a real time clock that will update according to the time zone you are in. There is a pet information page that has data sore in rails about dogs, cats and exotic pets.
+
+ The next component consumes a marketdata api that is holding 20 stocks with intraday updating information, 52 week high and lows, closing price the previous day and intraday price.
+
+ There is a Robot rolodex that consumes a json dummy data api, fetches robots as well then combines the two with nifty little cards for each robot and a search bar to filter all of your robots.
+
+ Pokèmon api collects pokèmon allows you to post  what your favorite pokèmon is and a button to increment a count.
+
+ Chuck norris api component that display's 6 random Chuck Norris jokes
+
+Nested route page that contains information  about particular topics that pertain to programming.
+
+Coding Challenge from Flatiron School for the last mode of the Software Program.
+
+
+Rick and Morty page that displays random caracters.
+
+This app will continue to grow as I continue to learn react.
+
+
+
 
 ## Available Scripts
 
