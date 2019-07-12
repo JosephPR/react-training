@@ -43,9 +43,9 @@ export default function App () {
         <hr />
 
         <Route exact path="/" component={Pet} />
-        <Route exact path="/dogs" component={Dog} />
-        <Route exact path="/cats" component={Cat} />
-        <Route exact path="/exotics" component={Exotic} />
+        <Route path="/dogs" component={Dog} />
+        <Route path="/cats" component={Cat} />
+        <Route path="/exotics" component={Exotic} />
         <Route path="/stocks" component={Stock} />
         <Route path="/robots" component={Robot} />
         <Route path="/pokemon" component={Pokemon} />

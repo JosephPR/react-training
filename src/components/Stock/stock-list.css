@@ -13,7 +13,7 @@
 
 .stock-card-container:hover {
   transform: scale(1.02);
-background-color: rgba(170, 150, 82, 0.2);;
+background-color: white;
 }
 
 .stock-card-list {

@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-
+import EditInput from '../../components/EditInput/edit-input'
+import './pokemon.css'
 
 export default class Pokemon extends Component {
   constructor(props) {
@@ -144,11 +145,10 @@ incrementCount = () => {
 
   render(){
     return <div>
-              <h1>HELLO!!</h1>
               <div>
 
                 <img src={this.state.pikachuImage} alt="pikachu" />
-                
+
                 <img src={this.state.vulpixImage} alt="vulpix" />
                 <img src={this.state.greninjaImage} alt="greninja" />
                 <img src={this.state.lopunnyImage} alt="lopunny" />
@@ -160,8 +160,10 @@ incrementCount = () => {
                 <img src={this.state.jigglypuffImage} alt="jigglypuff" />
                 <img src={this.state.squirtleImage} alt="squirtle" />
               </div>
+                          <EditInput />
               <p> The button was clicked {this.state.clickCount} times.</p>
-              <button onClick={this.incrementCount}>CLICK ME</button>
+              <button className="click" onClick={this.incrementCount}>CLICK ME</button> <br />
+              <img src="https://www.factinate.com/wp-content/uploads/2018/02/20-24.jpg" alt="pokepic" />
                 <footer>@Gotta Catchem all!&hearts;</footer>
             </div>
       }

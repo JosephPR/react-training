@@ -14,7 +14,7 @@ font-family: 'Gloria Hallelujah', cursive; */
 
 .list {
   text-align: center;
-  margin-left: 22%;
+
 }
 .search input {
   font-size: 2rem;
@@ -23,7 +23,7 @@ font-family: 'Gloria Hallelujah', cursive; */
 }
 
 .card img {
-  max-width: 60%;
+  max-width: 40%;
   box-shadow: 1px 1px 1px grey;
 }
 
@@ -52,7 +52,7 @@ button {
   font-size: 1.5rem;
   color: #f5f5ef;
   height: 35px;
-  width: 130px;
+  width: 100px;
   background-color: #eec587;
     cursor: pointer;
   border-radius: 20px;
@@ -63,7 +63,7 @@ button:hover {
   font-size: 1.5rem;
   color: #f5f5ef;
   height: 35px;
-  width: 130px;
+  width: 103px;
   background-color: #499882;
   border-radius: 20px;
   box-shadow: 1px 1px 1px 1px grey;
@@ -88,7 +88,7 @@ ul {
 }
 
 .pet-link {
-  padding-left: 100px;
+  padding-left: 10px;
   padding-right: 60px;
   font-size: 1.7rem;
   color: rgb(140, 15, 41);
