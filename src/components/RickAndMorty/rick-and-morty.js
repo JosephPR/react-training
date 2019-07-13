@@ -10,8 +10,8 @@ export default class RickAndMorty extends Component {
   }
 
   componentDidMount () {
-    const morty = Math.floor(Math.random() * 20)
-    const characters = `https://rickandmortyapi.com/api/character/?page=${morty}`
+    const pageNumber = Math.floor(Math.random() * 20)
+    const characters = `https://rickandmortyapi.com/api/character/?page=${pageNumber}`
 
     fetch (characters)
       .then(response => response.json())

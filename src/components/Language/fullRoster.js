@@ -1,5 +1,5 @@
 import React from 'react'
-import PlayerAPI from '../../api'
+import LanguageAPI from '../../api'
 import { Link } from 'react-router-dom'
 
 
@@ -9,9 +9,9 @@ const FullRoster = () => (
   <div>
     <ul>
       {
-        PlayerAPI.all().map(p => (
+        LanguageAPI.all().map(p => (
           <li key={p.number}>
-            <Link to={`/roster/${p.number}`}>{p.name}</Link>
+            <Link to={`/training/${p.number}`}>{p.name}</Link>
           </li>
         ))
       }

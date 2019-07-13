@@ -14,9 +14,19 @@ export default class Pokemon extends Component {
 
       }
   }
-
 componentDidMount(){
-  const pikachu ='https://pokeapi.co/api/v2/pokemon/pikachu/'
+  const pokemon =  Math.floor(Math.random() * 365)
+  const pokemon1 =  Math.floor(Math.random() * 365)
+  const pokemon2 =  Math.floor(Math.random() * 365)
+  const pokemon3 =  Math.floor(Math.random() * 365)
+  const pokemon4 =  Math.floor(Math.random() * 365)
+  const pokemon5 =  Math.floor(Math.random() * 365)
+  const pokemon6 =  Math.floor(Math.random() * 365)
+  const pokemon7 =  Math.floor(Math.random() * 365)
+  const pokemon8 =  Math.floor(Math.random() * 365)
+  const pokemon9 =  Math.floor(Math.random() * 365)
+  const pokemon10 =  Math.floor(Math.random() * 365)
+  const pikachu = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
 
   fetch (pikachu)
       .then(response => response.json())
@@ -26,7 +36,7 @@ componentDidMount(){
           pikachuImage: imageUrl,
         })
       })
-  const squirtle ='https://pokeapi.co/api/v2/pokemon/squirtle/'
+  const squirtle =`https://pokeapi.co/api/v2/pokemon/${pokemon1}`
 
   fetch (squirtle)
       .then(response => response.json())
@@ -36,7 +46,7 @@ componentDidMount(){
           squirtleImage: imageUrl,
         })
       })
-  const lopunny ='https://pokeapi.co/api/v2/pokemon/lopunny/'
+  const lopunny =`https://pokeapi.co/api/v2/pokemon/${pokemon2}`
 
   fetch (lopunny)
       .then(response => response.json())
@@ -46,7 +56,7 @@ componentDidMount(){
           lopunnyImage: imageUrl,
         })
       })
-  const gengar ='https://pokeapi.co/api/v2/pokemon/gengar/'
+  const gengar =`https://pokeapi.co/api/v2/pokemon/${pokemon3}`
 
   fetch (gengar)
       .then(response => response.json())
@@ -56,7 +66,7 @@ componentDidMount(){
           gengarImage: imageUrl,
         })
       })
-  const greninja ='https://pokeapi.co/api/v2/pokemon/greninja/'
+  const greninja =`https://pokeapi.co/api/v2/pokemon/${pokemon4}`
 
   fetch (greninja)
       .then(response => response.json())
@@ -66,7 +76,7 @@ componentDidMount(){
           greninjaImage: imageUrl,
         })
       })
-  const vulpix ='https://pokeapi.co/api/v2/pokemon/vulpix/'
+  const vulpix =`https://pokeapi.co/api/v2/pokemon/${pokemon5}`
 
   fetch (vulpix)
       .then(response => response.json())
@@ -76,7 +86,7 @@ componentDidMount(){
           vulpixImage: imageUrl,
         })
       })
-  const blaziken ='https://pokeapi.co/api/v2/pokemon/blaziken/'
+  const blaziken =`https://pokeapi.co/api/v2/pokemon/${pokemon6}`
 
   fetch (blaziken)
       .then(response => response.json())
@@ -88,7 +98,7 @@ componentDidMount(){
       })
 
 
-  const jigglypuff ='https://pokeapi.co/api/v2/pokemon/jigglypuff/'
+  const jigglypuff =`https://pokeapi.co/api/v2/pokemon/${pokemon7}`
 
   fetch (jigglypuff)
       .then(response => response.json())
@@ -99,7 +109,7 @@ componentDidMount(){
         })
       })
 
-  const charizard ='https://pokeapi.co/api/v2/pokemon/charizard/'
+  const charizard =`https://pokeapi.co/api/v2/pokemon/${pokemon8}`
 
   fetch (charizard)
       .then(response => response.json())
@@ -111,7 +121,7 @@ componentDidMount(){
         })
       })
 
-      const bulbasaur ='https://pokeapi.co/api/v2/pokemon/bulbasaur/'
+      const bulbasaur =`https://pokeapi.co/api/v2/pokemon/${pokemon9}`
 
       fetch (bulbasaur)
           .then(response => response.json())
@@ -122,7 +132,7 @@ componentDidMount(){
             })
           })
 
-          const palkia = 'https://pokeapi.co/api/v2/pokemon/palkia'
+          const palkia = `https://pokeapi.co/api/v2/pokemon/${pokemon10}`
 
           fetch(palkia)
             .then(response => response.json())

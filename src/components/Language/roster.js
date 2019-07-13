@@ -9,8 +9,8 @@ import '../../App.css'
 const Roster = () => (
   <Switch>
     <div className="players">
-    <Route exact path='/roster' component={FullRoster}/>
-    <Route path='/roster/:number' component={Player}/>
+    <Route exact path='/training' component={FullRoster}/>
+    <Route path='/training/:number' component={Player}/>
     </div>
   </Switch>
 )
