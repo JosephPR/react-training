@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import RamContainer from './ram-container'
+// import { SearchBox } from './SearchBox/search-box'
+
 
 export default class RickAndMorty extends Component {
   constructor(){
     super ()
     this.state = {
-        characters: ""
+        characters: "",
     }
   }
 
   componentDidMount () {
-    const pageNumber = Math.floor(Math.random() * 20)
+    const pageNumber = Math.floor(Math.random() * 25)
     const characters = `https://rickandmortyapi.com/api/character/?page=${pageNumber}`
 
     fetch (characters)
@@ -21,9 +23,12 @@ export default class RickAndMorty extends Component {
       )
   }
 
+
   render (){
+
       return (
     <div className='App'>
+
 
         <React.Fragment>
     {this.state.characters
