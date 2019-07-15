@@ -1,0 +1,32 @@
+.beer-card-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(194, 226, 183, 0.5);
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 25px;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: transform 0.25s ease-out;
+}
+
+.beer-card-container:hover {
+  transform: scale(1.02);
+    background-color: rgba(226, 220, 183, 0.2);
+}
+
+.beer-card-list {
+  width: 85vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+#beer-name {
+  font-size: 2rem;
+  text-decoration: none;
+  color: rgb(162, 76, 6);
+  font-family: monospace;
+  cursor: pointer;
+}

@@ -11,6 +11,7 @@ import Clock from './components/Clock/Clock'
 import Pokemon from './components/Pokemon/pokemon'
 import Language from './components/Language/roster'
 import Brewery from './components/Brewery/brewery'
+import Beer from './components/Beer/beer'
 // import Challenge from './components/Account/AccountContainer'
 import Jokes from './components/Jokes/jokes'
 import RickAndMorty from './components/RickAndMorty/rick-and-morty'
@@ -42,6 +43,8 @@ export default function App () {
 
             <Link className="link" to="/brewery">Brewery</Link>
 
+            <Link className="link" to="/beer">Beer</Link>
+
 
           </Menu>
         </header>
@@ -59,6 +62,7 @@ export default function App () {
         <Route path="/jokes" component={Jokes} />
         <Route path='/rickandmorty' component={RickAndMorty} />
         <Route path='/brewery' component={Brewery} />
+        <Route path='/beer' component={Beer} />
       </div>
     </Router>
   );
