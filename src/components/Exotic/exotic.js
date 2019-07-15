@@ -16,14 +16,14 @@ export default class Exotic extends Component {
 
 
   fetchExotics = () => {
-    let url = "http://localhost:3000/api/v1/exotics"
+    let url = "https://training-backend.herokuapp.com/api/v1/exotics"
     fetch(url)
       .then(response => response.json())
       .then(result => this.setState({exotics: result}))
   }
 
   deleteExotic = (id) => {
-    let url = `http://localhost:3000/api/v1/exotics/${id}`
+    let url = `https://training-backend.herokuapp.com/api/v1/exotics/${id}`
     fetch(url, {
       method: "DELETE",
       headers: {
@@ -41,7 +41,7 @@ export default class Exotic extends Component {
 updateTodo = (id) => {
     console.log(id)
     let newObj = { title: "JOEY", content: "newContent" }
-    let url = `http://localhost:3000/${id}`
+    let url = `https://training-backend.herokuapp.com/api/v1/exotics/${id}`
     fetch(url, {
       method: "PUT",
       body: JSON.stringify(newObj),
@@ -53,7 +53,7 @@ updateTodo = (id) => {
 }
 
   postExotic = (newExotic) => {
-    let url = "http://localhost:3000/api/v1/exotics"
+    let url = "https://training-backend.herokuapp.com/api/v1/exotics"
     // let newTodos =  [...this.state.todos, newTodo]
     fetch(url, {
       method: "POST",

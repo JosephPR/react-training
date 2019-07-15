@@ -10,8 +10,8 @@ export default class Beer extends Component {
   }
 
   componentDidMount() {
-    const pageNumber = Math.floor(Math.random() * 5)
-    const beerApi = `https://api.punkapi.com/v2/beers?page=${pageNumber}&per_page=80`
+    const pageNumber = Math.floor(Math.random() * 7)
+    const beerApi = `https://api.punkapi.com/v2/beers?page=${pageNumber}&per_page=50`
 
     fetch (beerApi)
       .then(response => response.json())
@@ -23,6 +23,7 @@ export default class Beer extends Component {
   render() {
     return(
       <div className='App'>
+        <h1>Beers from around the Country</h1>
         <React.Fragment>
         {this.state.beers
           ? <BeerContainer beers={this.state.beers} />

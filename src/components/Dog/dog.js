@@ -16,14 +16,14 @@ export default class Dog extends Component {
 
 
   fetchDogs = () => {
-    let url = "http://localhost:3000/api/v1/dogs"
+    let url = "https://training-backend.herokuapp.com/api/v1/dogs"
     fetch(url)
       .then(response => response.json())
       .then(result => this.setState({dogs: result}))
   }
 
   deleteDog = (id) => {
-    let url = `http://localhost:3000/api/v1/dogs/${id}`
+    let url = `https://training-backend.herokuapp.com/api/v1/dogs/${id}`
     fetch(url, {
       method: "DELETE",
       headers: {
@@ -41,7 +41,7 @@ export default class Dog extends Component {
 updateTodo = (id) => {
     console.log(id)
     let newObj = { title: "JOEY", content: "newContent" }
-    let url = `http://localhost:3000/api/v1${id}`
+    let url = `https://training-backend.herokuapp.com/api/v1/dogs/${id}`
     fetch(url, {
       method: "PUT",
       body: JSON.stringify(newObj),
@@ -53,7 +53,7 @@ updateTodo = (id) => {
 }
 
   postDog = (newDog) => {
-    let url = "http://localhost:3000/api/v1/dogs"
+    let url = "https://training-backend.herokuapp.com/api/v1/dogs"
     // let newTodos =  [...this.state.todos, newTodo]
     fetch(url, {
       method: "POST",

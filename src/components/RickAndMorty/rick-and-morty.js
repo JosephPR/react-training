@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import RamContainer from './ram-container'
+import './ram.css'
 // import { SearchBox } from './SearchBox/search-box'
 
 
@@ -28,8 +29,7 @@ export default class RickAndMorty extends Component {
 
       return (
     <div className='App'>
-
-
+      <img className='heading' src='https://nothingbutgeek.com/wp-content/uploads/2017/06/RAM_LOGO_FINAL.jpg' alt='rickandmorty' />
         <React.Fragment>
     {this.state.characters
       ? <RamContainer  characters={this.state.characters} />

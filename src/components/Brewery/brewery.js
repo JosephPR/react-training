@@ -26,6 +26,7 @@ export default class Brewery extends Component {
   render(){
     return(
       <div className='App'>
+        <h1>Breweries In Colorado</h1>
           <React.Fragment>
       {this.state.breweries
         ? <BreweryContainer  breweries={this.state.breweries} />

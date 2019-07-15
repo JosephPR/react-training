@@ -16,14 +16,14 @@ export default class Cat extends Component {
 
 
   fetchCats = () => {
-    let url = "http://localhost:3000/api/v1/cats"
+    let url = "https://training-backend.herokuapp.com/api/v1/cats"
     fetch(url)
       .then(response => response.json())
       .then(result => this.setState({cats: result}))
   }
 
   deleteCat = (id) => {
-    let url = `http://localhost:3000/api/v1/cats/${id}`
+    let url = `https://training-backend.herokuapp.com/api/v1/cats/${id}`
     fetch(url, {
       method: "DELETE",
       headers: {
@@ -41,7 +41,7 @@ export default class Cat extends Component {
 updateCat = (id) => {
     console.log(id)
     let newObj = { title: "JOEY", content: "newContent" }
-    let url = `http://localhost:3000/api/v1/${id}`
+    let url = `https://training-backend.herokuapp.com/api/v1/cats/${id}`
     fetch(url, {
       method: "PUT",
       body: JSON.stringify(newObj),
@@ -53,7 +53,7 @@ updateCat = (id) => {
 }
 
   postCat = (newCat) => {
-    let url = "http://localhost:3000/api/v1/cats"
+    let url = "https://training-backend.herokuapp.com/api/v1/cats"
     // let newCats =  [...this.state.todos, newCat]
     fetch(url, {
       method: "POST",

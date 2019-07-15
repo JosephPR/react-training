@@ -67,10 +67,8 @@ handleChange = (e) => {
      )
   return (
     <React.Fragment>
-{/* <SearchBox className="search"
-        placeholder="Search Stocks"
-        handleChange={this.handleChange}
-         /> */}
+
+       <h1>Stock Market Data</h1>
        <StockList favData={filteredStocks} >
       {
         this.state.favData.map(stock => {
