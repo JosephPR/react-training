@@ -12,6 +12,7 @@ import Pokemon from './components/Pokemon/pokemon'
 import Language from './components/Language/roster'
 import Brewery from './components/Brewery/brewery'
 import Beer from './components/Beer/beer'
+import Megaman from './components/Megaman/megaman'
 // import Challenge from './components/Account/AccountContainer'
 import Jokes from './components/Jokes/jokes'
 import RickAndMorty from './components/RickAndMorty/rick-and-morty'
@@ -45,6 +46,8 @@ export default function App () {
 
             <Link className="link" to="/beer">Beer</Link>
 
+            <Link className="link" to="/megaman">Megaman</Link>
+
 
           </Menu>
         </header>
@@ -63,6 +66,7 @@ export default function App () {
         <Route path='/rickandmorty' component={RickAndMorty} />
         <Route path='/brewery' component={Brewery} />
         <Route path='/beer' component={Beer} />
+        <Route path='/megaman' component={Megaman} />
       </div>
     </Router>
   );

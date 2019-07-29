@@ -8,7 +8,7 @@ span {
 
 
 #delete {
-
+  margin-top: auto;
   background-color: rgba(179, 57, 57, 0.71);
 }
 #delete:hover {

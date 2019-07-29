@@ -8,17 +8,16 @@ import './pets.css'
 export default function Pet () {
   return (
     <Router>
-{/*<h1>HELLLOOOOOOOOOOOO</h1>*/}
 <div>
 
   <Link className='pet-link' to="/dogs">Dogs</Link>
   <Link className='pet-link' to="/cats">Cats</Link>
   <Link className='pet-link' to="/exotics">Exotic</Link>
 
-
-          <Route exact path="/dogs" component={Dog} />
-          <Route exact path="/cats" component={Cat} />
-          <Route exact path="/exotics" component={Exotic} />
+          <Route  exact path="/" component={Pet} />
+          <Route  path="/dogs" component={Dog} />
+          <Route  path="/cats" component={Cat} />
+          <Route  path="/exotics" component={Exotic} />
 </div>
           <div className="images">
             <h1>Pet Specs</h1>
